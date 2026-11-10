@@ -3,6 +3,26 @@
   "name": "dariussbezy's Plugins (Test)",
   "description": "dariussbezy's plugins for Valenced.",
   "plugins": {
+    "dariuss.install-check": {
+      "name": "Install Check",
+      "description": "A no-op plugin to test the Valenced installer on iOS.",
+      "author": "dariuss",
+      "icon": "CircleCheckIcon",
+      "channels": {
+        "beta": "1.0.0-beta"
+      },
+      "versions": {
+        "1.0.0-beta": {
+          "url": "https://raw.githubusercontent.com/dariussbezy/dariussbezy-plugins-test/refs/heads/main/pool/dariuss.install-check@1.0.0-beta.zip",
+          "sha256": "3f9507d8ba01b13410d4fc4d430751f4f5a71a517868f6e27bc9c1f64f7fece7",
+          "size": 527,
+          "dependencies": {
+            "valenced.api": {},
+            "discord": {}
+          }
+        }
+      }
+    },
     "dariuss.jump-to-ping": {
       "name": "Jump to Ping",
       "description": "Find unread mentions, replies and DMs, then jump straight to the message.",
@@ -71,15 +91,13 @@
       "versions": {
         "1.0.0-beta": {
           "url": "https://raw.githubusercontent.com/dariussbezy/dariussbezy-plugins-test/refs/heads/main/pool/dariuss.quick-translate@1.0.0-beta.zip",
-          "sha256": "d40dde32c5521bd795ce55795e328a78aa24e08f400dee4bafb378fb8d3ee856",
-          "size": 36970,
+          "sha256": "4c78e6b4e1356807ff79bf5c54d68fdbc1bf88c811aa4f64b05424abe776c837",
+          "size": 36961,
           "dependencies": {
             "valenced.api": {
               "version": ">=1 <2"
             },
-            "discord": {
-              "version": ">=352.6 <352.7"
-            }
+            "discord": {}
           }
         }
       }

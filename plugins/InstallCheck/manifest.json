@@ -1,0 +1,16 @@
+{
+  "format": 1,
+  "id": "dariuss.install-check",
+  "name": "Install Check",
+  "description": "A no-op plugin to test the Valenced installer on iOS.",
+  "author": "dariuss",
+  "icon": "CircleCheckIcon",
+  "version": "1.0.0-beta",
+  "dependencies": {
+    "valenced.api": {},
+    "discord": {}
+  },
+  "dist": {
+    "script": "index.js"
+  }
+}

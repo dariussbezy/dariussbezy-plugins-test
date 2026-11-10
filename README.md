@@ -14,6 +14,8 @@ Choose the plugins you want from the **beta** channel. Existing plugin IDs and v
 
 ## iOS install diagnostics
 
+Refresh the test repository, then install **Install Check** first. It runs no code beyond an empty startup callback and has no native files or version constraints. Next, try **Quick Translate**. In this test catalog only, Quick Translate keeps its Valenced API requirement but drops its Discord version constraint so you can isolate an install failure. Its features may still be incompatible with the Discord build.
+
 The [Valenced diagnostics branch](https://github.com/dariussbezy/dariussbezy-plugins-test/tree/valenced-ios-diagnostics) preserves plain-text errors returned by the iOS installer. The catalog works with an existing Valenced installation. To see the newly exposed message, test the catalog using an iOS Valenced build made from that branch.
 
 ## Plugins and theme
