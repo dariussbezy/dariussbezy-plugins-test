@@ -2,7 +2,7 @@ import {
     callNativeMethod,
     callNativeMethodSync,
 } from '@valenced/modules/native'
-import { PluginSystemError } from './errors'
+import { PluginErrorCodes, PluginSystemError } from './errors'
 import type {
     MethodArgs,
     MethodName,
@@ -12,13 +12,21 @@ import type { PluginSystemErrorPayload } from './errors'
 
 type PluginMethodEnvelope<T> =
     | { result: T }
-    | { error: PluginSystemErrorPayload }
+    | { error: PluginSystemErrorPayload | string }
 
 function unwrap<T>(raw: unknown): T {
     const envelope = raw as PluginMethodEnvelope<T>
 
     if (envelope && typeof envelope === 'object') {
-        if ('error' in envelope) throw new PluginSystemError(envelope.error)
+        if ('error' in envelope) {
+            // Some iOS bridge handlers return a plain error message.
+            const error = envelope.error
+            throw new PluginSystemError(
+                typeof error === 'string'
+                    ? { code: PluginErrorCodes.Unknown, message: error }
+                    : error,
+            )
+        }
         if ('result' in envelope) return envelope.result
     }
 
