@@ -1,4 +1,4 @@
-# dariussbezy's Plugins
+# dariussbezy's Plugins (Test)
 
 dariussbezy's Valenced plugins and themes.
 
@@ -7,10 +7,14 @@ dariussbezy's Valenced plugins and themes.
 Add this single URL in **Valenced Settings → Plugins → Advanced → Repository URL**:
 
 ```text
-https://raw.githubusercontent.com/dariussbezy/dariussbezy-Plugins/main/index.json
+https://raw.githubusercontent.com/dariussbezy/dariussbezy-plugins-test/main/index.json
 ```
 
 Choose the plugins you want from the **beta** channel. Existing plugin IDs and versions are preserved. You can remove the old individual repository entries from Valenced after adding this repository; installed plugin settings remain associated with their existing IDs. Restart Discord after updates when requested.
+
+## iOS install diagnostics
+
+The [Valenced diagnostics branch](https://github.com/dariussbezy/dariussbezy-plugins-test/tree/valenced-ios-diagnostics) preserves plain-text errors returned by the iOS installer. The catalog works with an existing Valenced installation. To see the newly exposed message, test the catalog using an iOS Valenced build made from that branch.
 
 ## Plugins and theme
 
