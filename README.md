@@ -10,13 +10,9 @@ Add this single URL in **Valenced Settings → Plugins → Advanced → Reposito
 https://raw.githubusercontent.com/dariussbezy/dariussbezy-plugins-test/main/index.json
 ```
 
-Choose the plugins you want from the **beta** channel. Existing plugin IDs and versions are preserved. You can remove the old individual repository entries from Valenced after adding this repository; installed plugin settings remain associated with their existing IDs. Restart Discord after updates when requested.
+Choose the plugins you want from the **beta** channel. Existing plugin IDs are preserved. Restart Discord after updates when requested.
 
-## iOS install diagnostics
-
-Refresh the test repository, then install **Install Check** first. It runs no code beyond an empty startup callback and has no native files or version constraints. Next, try **Quick Translate**. In this test catalog only, the plugins and theme keep their other dependencies but drop the Discord version constraint. Installing successfully does not guarantee that all features work on the installed Discord build.
-
-The [Valenced diagnostics branch](https://github.com/dariussbezy/dariussbezy-plugins-test/tree/valenced-ios-diagnostics) preserves plain-text errors returned by the iOS installer. The catalog works with an existing Valenced installation. To see the newly exposed message, test the catalog using an iOS Valenced build made from that branch.
+For an existing installation, open the plugin's options, set **Repository** to **dariussbezy's Plugins**, select the **beta** channel and enable **Allow updates**. Adding this catalog alone does not switch the repository an installed plugin follows. Switch each plugin before removing its old individual repository entry.
 
 ## Plugins and theme
 
@@ -26,9 +22,17 @@ The [Valenced diagnostics branch](https://github.com/dariussbezy/dariussbezy-plu
 | [Jump to Ping](plugins/JTP/README.md) | Find unread mentions, replies and DMs, then jump straight to the message from the YOUBAR. | [`plugins/JTP`](plugins/JTP) |
 | [Show Hidden Channels](plugins/SHC/README.md) | Show hidden channel metadata with lock indicators and an information card. | [`plugins/SHC`](plugins/SHC) |
 | [Voice Messages To Text](plugins/VMTT/README.md) | Transcribe voice messages below the audio, with a free server or Groq. | [`plugins/VMTT`](plugins/VMTT) |
+| [Adv. Message Logger](plugins/AML/README.md) | Keep a local journal of edited and deleted messages, with in-chat history. | [`plugins/AML`](plugins/AML) |
+| [Ghost Ping Logger](plugins/GPL/README.md) | Keep a local journal of deleted mentions and replies, with ghost ping alerts. | [`plugins/GPL`](plugins/GPL) |
+| [No Tap Mention](plugins/NTM/README.md) | Disable tapping a message author's name to insert a mention. | [`plugins/NTM`](plugins/NTM) |
+| [Spotify Controls](https://github.com/dariussbezy/Spotify-Controls) | Control Spotify above the YOUBAR, search for songs and use a wave progress bar. | [Spotify Controls repository](https://github.com/dariussbezy/Spotify-Controls) |
 | [Midnight Mobile](themes/MT/README.md) | Midnight for Discord mobile: navy panels, blue accents, Figtree and the moon icon. | [`themes/MT`](themes/MT) |
 
-All current versions are **1.0.0-beta**. Only the beta channel is published.
+Jump to Ping is **1.1.0-beta**. Adv. Message Logger and Ghost Ping Logger are **1.0.1-beta**. Quick Translate is **1.0.3-beta**. Midnight Mobile is **1.0.2-beta**. Show Hidden Channels and Voice Messages To Text are **1.0.1-beta**. No Tap Mention is **1.0.0** on the stable **latest** channel.
+
+Spotify Controls is **1.0.0-beta** on **beta**, distributed here as the same approved installable ZIP from its individual repository.
+
+AML and GPL work independently and cooperate when both are enabled. Their current beta release is **1.0.1-beta**. Follow **beta** and enable **Allow updates** to receive it.
 
 Midnight's colors, Figtree font and moon icon are selected separately under **Valenced Settings → Themes**. Font and icon changes require a restart.
 
@@ -36,4 +40,4 @@ Midnight's colors, Figtree font and moon icon are selected separately under **Va
 
 Plugin adaptations by dariuss with Codex. Midnight was originally created by [refact0r](https://github.com/refact0r/midnight-discord), with Figtree by Erik Kennedy and the Font Awesome moon icon. Required third-party notices are included with Midnight's assets.
 
-The individual repositories host test builds. [Liquid Glass YOUBAR](https://github.com/dariussbezy/Liquid-Glass-YOUBAR) is developed and tested in its own repository.
+The individual repositories host test builds.

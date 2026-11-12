@@ -1,3 +1,4 @@
+import manifest from "../manifest.json";
 import { BottomSheet } from "@valenced/externals/gorhom";
 import { TranslationSheet } from "./translation-sheet";
 import { Design } from "@valenced/discord/design";
@@ -50,7 +51,7 @@ const ChannelStore = store("ChannelStore"),
 /* ------------------------------------------------------------------ */
 /* constants + settings store                                          */
 /* ------------------------------------------------------------------ */
-const BUILD = "1.0.0-beta";
+const BUILD = manifest.version;
 const ACCENT = "#8EA1FF";
 const MAX_TRANSLATIONS = 300;
 const MAX_CACHE = 200;
@@ -2284,7 +2285,8 @@ function TranslateButton(props) {
       const job = armed;
       run(job.tl, job.sl).then((ok) => {
         if (ok) {
-          armed = job.oneShot ? job.resume || null : null;
+          // A translated draft must return to Send, including one-time overrides.
+          armed = null;
           notifyButton();
         }
       });
@@ -2761,7 +2763,7 @@ function ComposerSendSlot(props) {
           position: "relative",
           alignItems: "center",
           justifyContent: "center",
-          alignSelf: "center",
+          alignSelf: "flex-end",
         },
       },
       h(
@@ -2799,7 +2801,7 @@ function ComposerSendSlot(props) {
       style: {
         flexDirection: "row",
         alignItems: "center",
-        alignSelf: "center",
+        alignSelf: "flex-end",
         flexGrow: 0,
         flexShrink: 0,
       },
@@ -4310,7 +4312,7 @@ const originalPlugin = {
   description:
     "Translate incoming and outgoing messages with Google Translate or DeepL.",
   id: "quicktranslate",
-  version: "1.0.0-beta",
+  version: BUILD,
   start() {
     renderErrors = 0;
     pendingRequestCount = 0;

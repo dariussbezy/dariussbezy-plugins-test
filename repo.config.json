@@ -2,22 +2,31 @@
   "name": "dariussbezy's Plugins (Test)",
   "description": "dariussbezy's plugins for Valenced.",
   "channels": {
-    "dariuss.install-check": {
-      "beta": "1.0.0-beta"
-    },
     "dariuss.quick-translate": {
-      "beta": "1.0.0-beta"
+      "beta": "1.0.3-beta"
     },
     "dariuss.jump-to-ping": {
-      "beta": "1.0.0-beta"
+      "beta": "1.1.0-beta"
     },
     "dariuss.show-hidden-channels": {
-      "beta": "1.0.0-beta"
+      "beta": "1.0.1-beta"
     },
     "dariuss.voice-messages-to-text": {
-      "beta": "1.0.0-beta"
+      "beta": "1.0.1-beta"
     },
     "dariuss.midnight-theme": {
+      "beta": "1.0.2-beta"
+    },
+    "dariuss.advanced-message-logger": {
+      "beta": "1.0.1-beta"
+    },
+    "dariuss.ghost-ping-logger": {
+      "beta": "1.0.1-beta"
+    },
+    "dariuss.no-tap-mention": {
+      "latest": "1.0.0"
+    },
+    "dariuss.spotify-controls": {
       "beta": "1.0.0-beta"
     }
   }
